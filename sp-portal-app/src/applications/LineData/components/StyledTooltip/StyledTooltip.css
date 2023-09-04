@@ -1,0 +1,9 @@
+.popper > .MuiTooltip-tooltip {
+  background: var(--white);
+  color: var(--black);
+  border-radius: 5px;
+  border: var(--border-default);
+  padding: 8px;
+  font-weight: var(--font-weight-semibold);
+  font-size: 12px;
+}

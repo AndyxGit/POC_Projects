@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.generalFilterContainer {
+    background-color: var(--light-blue);
+    width: 30%;
+    border-radius: 5px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.filterTitle {
+    padding: 18px;
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterContainers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.buttonsContainer {
+    display: flex;
+    font-size: 16px;
+    flex-direction: row;
+}
+
+.leftButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--institutional-blue);
+    border: 1px solid var(--institutional-blue);
+    background-color: var(--white);
+    width: 7.6vw;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 32px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+}
+
+.centerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--institutional-blue);
+    border: 1px solid var(--institutional-blue);
+    background-color: var(--white);
+    width: 7.6vw;
+    height: 32px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+}
+
+.rightButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--institutional-blue);
+    border: 1px solid var(--institutional-blue);
+    background-color: var(--white);
+    width: 7.6vw;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 32px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+}
+
+.leftButton:hover {
+    background-color: var(--institutional-blue);
+    color: var(--white);
+}
+
+.centerButton:hover {
+    background-color: var(--institutional-blue);
+    color: var(--white);
+}
+
+.rightButton:hover {
+    background-color: var(--institutional-blue);
+    color: var(--white);
+}
+
+.leftSelectedButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    border: 1px solid var(--institutional-blue);
+    background-color: var(--institutional-blue);
+    width: 7.6vw;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.centerSelectedButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    border: 1px solid var(--institutional-blue);
+    background-color: var(--institutional-blue);
+    width: 7.6vw;
+    height: 32px;
+    cursor: pointer;
+}
+
+.rightSelectedButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    border: 1px solid var(--institutional-blue);
+    background-color: var(--institutional-blue);
+    width: 7.6vw;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.tooltip {
+    margin-left: 10px;
+}
+
+.select {
+    width: 23.4vw;
+}
+
+.select:focus {
+    border-color: var(--institutional-blue);
+}
+
+.css-1p3m7a8-multiValue {
+    background-color: var(--white) !important;
+    border: 1px solid var(--gray-1) !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    border-radius: 30px !important;
+    border-color: var(--gray-1);
+    font-size: 16px;
+    color: var(--gray-1) !important;
+}
+
+.css-1p3m7a8-multiValue:hover {
+    background-color: var(--gray-4) !important;
+    border: 1px solid var(--gray-1) !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 5px !important;
+    padding-bottom: 3px !important;
+    border-radius: 30px !important;
+    border-color: var(--gray-1);
+    font-size: 16px;
+    color: var(--gray-1) !important;
+}
+
+.css-12a83d4-MultiValueRemove {
+    background-color: transparent !important;
+    color: var(--gray-1) !important;
+}
+
+.loadingContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.css-tj5bde-Svg {
+    width: 17px !important;
+    height: 17px !important;
+    margin-top: 2px;
+}
+
+.css-1u9des2-indicatorSeparator {
+    display: none !important;
+}

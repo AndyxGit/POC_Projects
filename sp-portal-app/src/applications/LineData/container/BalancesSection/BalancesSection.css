@@ -1,0 +1,13 @@
+.main-data-container {
+  background-color: var(--gray-4);
+  border-radius: var(--border-radius-small);
+  padding: var(--padding-container-default);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.monthly-payment-balances-container {
+  display: flex;
+  gap: 10px;
+}

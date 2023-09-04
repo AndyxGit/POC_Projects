@@ -1,0 +1,11 @@
+{
+  "url": "{{base.url}}",
+  "headers": {
+    "Content-Type": "application/json",
+    "Session-Id": "sasa",
+    "Channel-Id": "sasa",
+    "User-Id": "wqwqw",
+    "Line-Number": "{{lineNumber}}"
+  },
+  "endpoint": "/lineCheck"
+}

@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.titleAndSearch {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  justify-content: space-between;
+  margin-left: 35px;
+  width: 91vw;
+}
+
+.title {
+  color: var(--institutional-red);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.sideBar { 
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+
+.pagesContainer {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  padding-left: 25px;
+  padding-top: 15px;
+  margin-left: 10px;
+  
+}
+
+
+.verticalContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  padding-bottom: 150px;
+}
+
+
+.errorMessageContainer {
+  position: fixed;
+  background-color: var(--light-red);
+  z-index: 9999;
+  bottom: 40px;
+  left: 100px;
+  border: 1px solid var(--base-red) !important;
+  border-radius: 5px;
+}
+
+.closeButton {
+  font-size: 13px;
+  width: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.alertChildren {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+}

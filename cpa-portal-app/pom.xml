@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+	<!--           HONNI SOIT QUI MAL Y PENSE            -->
+	<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>io.lippia</groupId>
+		<artifactId>root</artifactId>
+		<version>3.2.3.8</version>
+	</parent>
+
+	<groupId>Portal-Prepago</groupId>
+	<artifactId>PortalPrepago</artifactId>
+	<version>1.1.0</version>
+	<name>cpa_portal_app</name>
+
+	<packaging>jar</packaging>
+
+	<properties>
+		<maven.build.timestamp.format>yyyyMMdd_HHmm</maven.build.timestamp.format>
+
+		<runner>testngSecuencial.xml</runner>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- defult configuration chrome local -->
+		<crowdar.projectType></crowdar.projectType>
+		<crowdar.driver.capabilities.json_path></crowdar.driver.capabilities.json_path>
+		<crowdar.setupStrategy></crowdar.setupStrategy>
+		<crowdar.driverHub></crowdar.driverHub>
+
+		<!-- cucumber options -->
+		<cucumber.stepsDefinitions>--glue / </cucumber.stepsDefinitions>
+		<cucumber.hooks>--glue	com/crowdar/bdd/cukes/hooks</cucumber.hooks>
+		<cucumber.tags>--tags '@Regresion'</cucumber.tags>
+		<cucumber.reporters>--plugin pretty --plugin com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:</cucumber.reporters>
+		<crowdar.cucumber.option>src/test/resources/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --tags 'not @Ignore' ${cucumber.tags} ${cucumber.reporters}</crowdar.cucumber.option>
+
+		<!-- client project custom properties -->
+		<web-app.url>https://{{environment}}-psp.claro.com.ar/</web-app.url>
+
+	</properties>
+	<profiles>
+	
+		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+		<!--    Profiles related to Browser requirementes    -->
+		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+		
+		<profile>
+			<id>chrome</id>
+			<properties>
+				<crowdar.projectType>WEB_CHROME</crowdar.projectType>
+				<crowdar.driver.capabilities.json_path>src/main/resources/browsers/chromeCapabilities.json</crowdar.driver.capabilities.json_path>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>firefox</id>
+			<properties>
+				<crowdar.projectType>WEB_FIREFOX</crowdar.projectType>
+				<crowdar.driver.capabilities.json_path>src/main/resources/browsers/firefoxCapabilities.json</crowdar.driver.capabilities.json_path>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>chromeHeadless</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<crowdar.projectType>WEB_CHROME</crowdar.projectType>
+				<crowdar.driver.capabilities.json_path>src/main/resources/browsers/chromeCapabilitiesGrid.json</crowdar.driver.capabilities.json_path>
+			</properties>
+		</profile>
+
+		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+		<!--   Profiles related to Driver Instance petition   -->
+		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+		
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<crowdar.setupStrategy>web.DownloadLatestStrategy</crowdar.setupStrategy>
+			</properties>
+		</profile>
+
+				
+		<profile> 
+			<id>stack_local</id>
+			<properties>
+				<crowdar.setupStrategy>web.SeleniumGridStrategy</crowdar.setupStrategy>
+				<!-- you can set your seleniumGrid url -->
+				<crowdar.driverHub>http://localhost:4444/wd/hub</crowdar.driverHub>
+			</properties>
+		</profile>
+
+	</profiles>
+	<dependencies>
+		<dependency>
+			<groupId>io.lippia</groupId>
+			<artifactId>core</artifactId>
+			<version>3.2.3.8</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports-cucumber4-adapter</artifactId>
+			<version>1.0.10</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>2.0.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.claro.automation</groupId>
+			<artifactId>aut-lineas-pruebas</artifactId>
+			<version>1.20.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.claro.sp.ta.cpas</groupId>
+			<artifactId>ExecutionsCPA</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.claro.sp.ta.db</groupId>
+			<artifactId>DBAccess</artifactId>
+			<version>1.9.0-SNAPSHOT</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.skyscreamer</groupId>
+			<artifactId>jsonassert</artifactId>
+			<version>1.5.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.3.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.3.0</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+
+	</dependencies>
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.1</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>${runner}</suiteXmlFile>
+					</suiteXmlFiles>
+					<testFailureIgnore>false</testFailureIgnore>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>11</source>
+					<target>11</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+</project>

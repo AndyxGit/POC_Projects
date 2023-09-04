@@ -1,0 +1,14 @@
+{
+  "url": "{{urlToken}}",
+  "headers": {
+    "Service": "default",
+    "Channel-Id": "sasa",
+    "Session-Id": "sasa",
+    "User-Id": "wqwqw"
+  },
+  "body": {
+    "username":"test",
+    "password":"test"
+  },
+  "endpoint": "/v2/login"
+}

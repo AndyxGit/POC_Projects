@@ -1,0 +1,11 @@
+{
+  "url": "{{urlTn3Details}}",
+  "headers": {
+    "Authorization": "{{authorization}}",
+    "Session-Id": "sasa",
+    "Channel": "sasa",
+    "Service": "default",
+    "subId": "{{subId}}"
+  },
+  "endpoint": "/v2/details"
+}

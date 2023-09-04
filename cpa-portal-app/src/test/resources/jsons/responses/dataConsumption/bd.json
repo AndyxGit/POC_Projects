@@ -1,0 +1,9 @@
+{
+  "cost" : "28.331,86",
+  "volume" : "351,56",
+  "consumosParciales" : [ "-5.780,81", "-3.646,81", "-1.487,52", "-8.684,22", "-8.732,50" ],
+  "traficosParciales" : [ "96,66", "97,99", "96,18", "60,37", "0,36" ],
+  "servicios" : [ "Facebook Gratis", "YouTube Gratis", "Instag. Gratis", "Twitter Gratis", "TikTok Gratis" ],
+  "roaming" : [ "NO", "NO", "NO", "NO", "NO" ],
+  "fechas" : [ "11/05/2023", "11/05/2023", "11/05/2023", "11/05/2023", "11/05/2023" ]
+}

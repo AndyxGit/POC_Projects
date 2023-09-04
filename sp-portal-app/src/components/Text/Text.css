@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.textt {
+    padding-top: 9px;
+    margin-bottom: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-1);
+    margin-left: 20px;
+}

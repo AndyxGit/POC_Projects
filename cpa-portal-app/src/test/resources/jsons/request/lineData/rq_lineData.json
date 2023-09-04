@@ -1,0 +1,13 @@
+{
+  "url": "{{base.url}}",
+  "headers": {
+    "Content-Type": "application/json",
+    "Session-Id": "sasa",
+    "Channel-Id": "sasa",
+    "User-Id": "wqwqw",
+    "Cellular-Number": "{{lineNumber}}",
+    "msisdn": "{{msisdn}}",
+    "rplId": "{{rplId}}"
+  },
+  "endpoint": "/lineData"
+}

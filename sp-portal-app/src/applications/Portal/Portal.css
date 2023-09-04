@@ -1,0 +1,36 @@
+@keyframes opacityEffect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.cardsContainer {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    width: 91vw;
+    padding: 0px 0px 20px;
+    box-shadow: 0px 0px 2.55px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    animation: 0.3s ease-out 0s 1 opacityEffect;
+    height: 82vh;
+}
+
+
+.hr {
+    background-color: #D9D9D9;
+    height: 1px;
+}
+
+
+.three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px;
+    column-gap: 20px;
+    row-gap: 23px;
+}

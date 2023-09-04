@@ -1,0 +1,42 @@
+.datePickerContainer {
+    position: relative;
+    z-index: 10;
+}
+
+.Calendar {
+    max-height: 40px !important;
+    height: 40px !important;
+    width: 23.5vw;
+    background-color: white;
+}
+
+/* // input on hover gris 2 */
+
+.Calendar .Mui-focused fieldset.MuiOutlinedInput-notchedOutline {
+    border-color: var(--institutional-blue) !important;
+}
+
+.css-1yllih9-MuiPaper-root-MuiPickersPopper-paper {
+    position: absolute !important;
+    z-index: 9999 !important;
+    left: -135px !important;
+}
+
+.switchContainer {
+    display: flex;
+    justify-content: flex;
+    align-items: center;
+    font-size: 14px;
+    width: 23.4vw;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.switch {
+    margin-right: 15px;
+}
+
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+    height: 52px;
+}

@@ -1,0 +1,11 @@
+{
+    "correlationId": "Testing-Pruebas2022",
+    "deltaAmount": "%monto%",
+    "expiryDate": {
+      "dateTime": "2022-09-18 17:25:52.123 -0300",
+      "format": "yyyy-MM-dd HH:mm:ss.SSS Z"
+    },
+    "noFailOnInsufficentFunds": true,
+    "trafficType": 0,
+    "transactionType": 2
+  }

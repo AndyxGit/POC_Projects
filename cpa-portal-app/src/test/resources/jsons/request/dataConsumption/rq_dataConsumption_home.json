@@ -1,0 +1,27 @@
+{
+  "url": "{{base.url}}",
+  "headers": {
+    "Content-Type": "application/json",
+    "Session-Id": "sasa",
+    "Channel-Id": "sasa",
+    "User-Id": "CpaByCarlos",
+    "BillNumber": "{{lineNumber}}"
+  },
+  "body": {
+    "dateFrom": {
+      "dateTime": "{{diaDesde}} 00:00:00.000 -0300",
+      "format": "yyyy-MM-dd HH:mm:ss.SSS Z"
+    },
+    "dateTo": {
+      "dateTime": "{{diaHasta}} 00:00:00.000 -0300",
+      "format": "yyyy-MM-dd HH:mm:ss.SSS Z"
+    },
+    "filterList": {
+      "roaming": false,
+      "ratingGroupList": [
+        "{{filtros}}"
+      ]
+    }
+  },
+  "endpoint": "/dataConsumption"
+}

@@ -1,0 +1,19 @@
+.default-balance-container {
+  background: var(--white);
+  border-radius: var(--border-radius-small);
+  flex: 1;
+  height: fit-content;
+  border: var(--border-default)
+}
+
+.data-container {
+  flex: 1;
+  padding: 10px 10px 0 10px;
+}
+
+.data-container > .amount-date-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0 16px 0;
+  align-items: center;
+}

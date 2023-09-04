@@ -1,0 +1,7 @@
+.basic-pill-info-container {
+  border-radius: var(--border-radius-small);
+  background-color: var(--gray-4);
+  padding: 12px 13px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+{
+  "url": "{{urlTn3Balances}}",
+  "headers": {
+    "Authorization": "{{authorization}}",
+    "Session-Id": "sasa",
+    "Channel": "sasa",
+    "Service": "default",
+    "subId": "{{subId}}"
+  },
+  "body": {
+    "bestDate": true,
+    "periodicBalanceDelta": "{{recharge}}",
+    "operatorId": 0,
+    "transactionType": 0
+  },
+  "endpoint": "/v2/balances/fundTransfer"
+}

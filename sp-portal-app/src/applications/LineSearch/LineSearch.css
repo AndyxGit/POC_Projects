@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.search {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+    padding: 8.5px 13px 8.5px 18px;
+    gap: 73px;
+    width: 180px;
+    height: 42px;
+    background: var(--white);
+    border: 1px solid var(--gray-3);
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--gray-1);
+}
+
+.countrySelectStyle {
+    background-color: var(--white);
+    width: 90px;
+    height: 40px;
+    border: 1px solid var(--gray-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+input:focus { 
+    outline: none !important;
+    border-color: var(--institutional-blue);
+    border-width: 2px;
+ }
+
+.countryOption {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countryName {
+    margin-left: 10px;
+    color: var(--gray-1);
+    font-size: 14px;
+}

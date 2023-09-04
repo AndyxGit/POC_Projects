@@ -1,0 +1,78 @@
+.modalContainer {
+    background-color: rgba(150, 150, 150, 0.1);
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.modal {
+    width: 400px;
+    height: 140px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white);
+    flex-direction: column;
+}
+
+.modalRowContainer {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalIcon {
+    margin-right: 23px;
+}
+
+.modalMessage {
+    color: var(--gray-2);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.deniedModalButton {
+    width: 170px;
+    height: 41px;
+    border: 1px solid var(--institutional-blue);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--institutional-blue);
+    margin-right: 10px;
+    transition: background-color 0.2s;
+}
+
+.deniedModalButton:hover {
+    background-color: var(--institutional-blue);
+    color: white;
+    cursor: pointer;
+}
+
+.confirmModalButton {
+    width: 170px;
+    height: 42px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--institutional-blue);
+    margin-left: 10px;
+    transition: background-color 0.2s;
+}
+
+.confirmModalButton:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}

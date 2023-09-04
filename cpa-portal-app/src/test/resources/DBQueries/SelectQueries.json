@@ -1,0 +1,19 @@
+{
+  "selectPACK_FROM_PACKAGES":"SELECT * FROM packages WHERE PKT_ID='%s'",
+  "selectPACK_FROM_SERVICE_PACK_PARAMETERS": "SELECT * FROM service_pack_parameters WHERE SEP_PKT_ID='%s'",
+  "selectPrepayCellulars": "SELECT PCE_HANDLE,PCE_CLU_CELLULAR_NUMBER,PCE_PCS_ID_ACTUAL FROM prepay_cellulars WHERE PCE_CLU_CELLULAR_NUMBER=?",
+  "selectRatePlansProfile": "SELECT rp.rppr_gprf_id FROM RATE_PLAN_PROFILES RP WHERE RP.RPPR_RPL_ID=? AND RP.RPPR_END_DATE > SYSDATE",
+  "selectRatePlanProfiles": "SELECT RPPR_RPL_ID, RPPR_GPRF_ID FROM RATE_PLAN_PROFILES WHERE SYSDATE BETWEEN RPPR_START_DATE and RPPR_END_DATE",
+  "selectCellularOperations": "SELECT * from cellular_operations where CEO_CELLULAR_NUMBER=?",
+  "selectPrepayCellular": "SELECT PCE_PCS_ID_ACTUAL, PCE_LAST_STATUS_UPDATE, PCE_PCS_ID_BEFORE, PCE_LAST_UPDATE, PCE_ADD_DATE, PCE_LAST_RECHARGE_DATE, PCE_SUSPEND_DATE, PCE_CANCEL_DATE FROM PREPAY_CELLULARS WHERE PCE_CLU_CELLULAR_NUMBER='?'",
+  "selectPrepayCellularStatus": "SELECT PCS_ID, PCS_DESCRIPTION, PCS_STATUS_CONVERTION FROM PREPAY_CELLULAR_STATUS",
+  "selectFrozenBalanceDays": "SELECT PAR_VALUE FROM PARAMETERS WHERE PAR_NAME='FROZEN_BALANCE_DAYS'",
+  "selectPromoPlusCount": "SELECT count(*) AS EXCEPTIONS FROM PLUS_PROMOTIONS_EXCEPTIONS WHERE PPE_RPL_ID='?' AND sysdate BETWEEN PPE_START_DATE AND PPE_END_DATE",
+  "selectPromoPlusAvailable": "SELECT decode(count(1),0,'true','false') AS RESULT FROM PLUS_PROMOTIONS_EXCEPTIONS WHERE PPE_RPL_ID='?' AND SYSDATE BETWEEN PPE_START_DATE AND PPE_END_DATE",
+  "selectCoLine": "SELECT CLU_CELLULAR_NUMBER FROM CELLULARS WHERE CLU_CBT_ID = 'CO' AND CLU_STATUS = 'A' AND ROWNUM = 1",
+  "selectConsumosEnRango": "SELECT * FROM data_daily_consumption WHERE ddc_subscriber_id = ? AND ddc_cdr_date BETWEEN  TO_DATE( ? , 'dd/MM/yyyy')  AND  TO_DATE( ? , 'dd/MM/yyyy') AND ddc_rating_group IN ( %  )",
+  "selectCommonServices": "select PPA_VALUE from prepay_parameters where ppa_name='RATING_GROUPS_FILTERS' AND SYSDATE BETWEEN PPA_START_DATE AND NVL(PPA_END_DATE,SYSDATE+1)",
+  "selectSocialNetworks": "select PPA_VALUE from prepay_parameters where ppa_name = 'RATING_GROUPS_SOCIAL_NETWORKS' AND  SYSDATE BETWEEN PPA_START_DATE AND NVL(PPA_END_DATE,SYSDATE+1)",
+  "selectVRatingGroupDescription": "select * from v_rating_group_description where rating_group in ( % )"
+}
+

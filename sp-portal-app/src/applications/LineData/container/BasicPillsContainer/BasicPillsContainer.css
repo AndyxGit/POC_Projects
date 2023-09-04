@@ -1,0 +1,6 @@
+.line-data-footer {
+  padding: 15px 15px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+}

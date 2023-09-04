@@ -1,0 +1,17 @@
+.accordion-header {
+  box-shadow: var(--box-shadow-default);
+  border-radius: var(--border-radius-big);
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+  background-color: var(--white);
+  position: relative;
+  z-index: 1;
+
+}
+
+.color-disabled{
+  color: var(--gray-3)
+}

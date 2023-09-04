@@ -1,0 +1,173 @@
+@import './reset.css';
+
+body {
+  margin: 0;
+  z-index: 20;
+  background-color: #E5E5E5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+:root {
+  --light-blue: #D4F7FF;
+  --institutional-blue: #0097a9;
+  --dark-blue: #006274;
+  --white: #FFFFFF;
+  --gray-5: #F5F5F5;
+  --gray-4: #EBEBEB;
+  --gray-3: #D0D0D0;
+  --gray-2: #6A6A6A;
+  --gray-1: #222222;
+  --black: #000000;
+  --light-red: #FFD4D4;
+  --institutional-red: #DA291C;
+  --base-red: #B50000;
+  --dark-red: #8B0000;
+  --light-green: #CEE6C6;
+  --base-green: #0B7329;
+  --light-orange: #FFFCE0;
+  --base-orange: #FAB400;
+  --color-green-base: #46A437;
+
+  --border-radius-big: 10px;
+  --border-radius-small: 5px;
+
+  --primary-color: var(--institutional-blue);
+  
+  --padding-container-default: 15px 14px;
+
+  --border-default: 1px solid var(--gray-3);
+
+  --box-shadow-default: 0px 2px 8px rgba(0, 0, 0, 0.2);
+
+  --font-weight-bold:     700;
+  --font-weight-semibold: 600;
+  --font-weight-regular:  400;
+
+  --font-size-huge:     24px;
+  --font-size-big:      18px;
+  --font-size-normal:   16px;
+  --font-size-small:    14px;
+}
+
+
+.color-white {
+  color: #FFFFFF;
+}
+
+.color-gray-5 {
+  color: #F5F5F5;
+}
+.color-gray-4 {
+  color: #EBEBEB;
+}
+.color-gray-3 {
+  color: #D0D0D0;
+}
+.color-gray-2 {
+  color: #6A6A6A;
+}
+.color-gray-1 {
+  color: #222222;
+}
+.color-black { 
+  color: #000000;
+}
+
+.color-light-blue {
+  color: #D4F7FF;
+}
+.color-institutional-blue {
+  color: #0097A9;
+}
+.color-dark-blue {
+  color: #006274;
+}
+
+.color-green-base {
+  color: #46A437;
+}
+.color-green-light {
+  color: #CEE6C6;
+}
+
+.color-orange-light {
+  color: #FAB400;
+}
+.color-orange-base {
+  color: #FAB400;
+}
+
+.color-light-red {
+  color: #FFD4D4;
+}
+
+.color-institutional-red {
+  color: #DA291C;
+}
+
+.color-base-red {
+  color: #B50000;
+}
+
+.color-dark-red {
+  color: #8B0000;
+}
+
+.title {
+  font-weight: var(--font-weight-semibold);
+  line-height: 120%;
+  letter-spacing: 0%;
+  font-size: var(--font-size-big);
+
+}
+
+.subtitle {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-normal);
+  line-height: 120%;
+  letter-spacing: 0%;
+
+}
+
+.body-1-semibold {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-small);
+  line-height: 120%;
+  letter-spacing: 0%;
+
+}
+
+.body-1-regular {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-normal);
+  line-height: 120%;
+  letter-spacing: 0%;
+
+}
+
+.body-2 {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-small);
+  line-height: 120%;
+  letter-spacing: 0%;
+
+}
+
+.initials {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-huge);
+  line-height: 120%;
+  letter-spacing: 0%;
+
+}

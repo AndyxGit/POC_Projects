@@ -1,0 +1,9 @@
+{
+  "deleteTx": "DELETE FROM prepay_interfaces WHERE ppi_clu_cellular_number = '%s' and ppi_ist_id NOT IN ('Y','N')",
+  "deleteGiftActiavtionPack": "DELETE FROM gift_activation_pack WHERE GAP_CLU_CELLULAR_NUMBER = '%s'",
+  "delete_by_pack_GAP": "DELETE FROM gift_activation_pack WHERE GAP_PKT_ID = '%s'",
+  "deleteSpecialServiceByHandle": "DELETE FROM SPECIAL_SERVICES_EXPIRATION WHERE SSE_HANDLE = '%s'",
+  "deleteCellular": "DELETE FROM CELLULARS WHERE CLU_CELLULAR_NUMBER = '%s'",
+  "deleteRegisterInTable": "DELETE FROM $table WHERE PCE_CLU_CELLULAR_NUMBER='$cellularNumber'",
+  "deleteCondiciones": "DELETE FROM data_daily_consumption WHERE ddc_subscriber_id = ? "
+}

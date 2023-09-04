@@ -1,0 +1,8 @@
+{
+  "url": "{{urlProductInventory}}",
+  "headers": {
+    "Channel-Id": "sasa",
+    "Session-Id": "sasa"
+  },
+  "endpoint": "/tmf-api/productInventory/v4/product/{{lineNumber}}?product.name=FUNDS_PERIODIC"
+}

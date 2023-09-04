@@ -1,0 +1,16 @@
+{
+  "updateNegocioCellulars": "UPDATE CELLULARS SET CLU_CBT_ID = '%s' WHERE CLU_CELLULAR_NUMBER = '%s'",
+  "updateEstadoActualPrepayCellular": "UPDATE prepay_cellulars pc set pc.pce_pcs_id_actual = '%s' where pc.pce_clu_cellular_number = '%s'",
+  "updateHistorialRecargaPrepayCellular": "UPDATE prepay_cellulars pc set pc.pce_hist_recharge_counter = '%s' where pc.pce_clu_cellular_number = '%s'",
+  "updateBusinessCellulars": "UPDATE CELLULARS SET CLU_CBT_ID = ? WHERE CLU_CELLULAR_NUMBER = ?",
+  "updateCellularPlan" : "UPDATE CELLULAR_PLANS CP SET CP.CPL_RPL_ID=? WHERE cp.cpl_clu_cellular_number=? and cp.cpl_stg_id='AH' and cp.cpl_end_date > sysdate",
+  "updateDeletedCellulars": "UPDATE Deleted_Cellulars set DEL_CELLULAR_NUMBER=?, DEL_CELLULAR_NUMBER_BEFORE=?,DEL_PCE_HANDLE=? WHERE DEL_ID=?",
+  "updatePrepay_parameters": "UPDATE PREPAY_PARAMETERS set PPA_END_DATE=? WHERE PPA_NAME = 'RAZONES_CANC_CDV' AND trunc(SYSDATE) BETWEEN Ppa_Start_Date AND nvl(Ppa_End_Date,trunc(SYSDATE))",
+  "updateDuplicateCellularPlan": "UPDATE CELLULAR_PLANS CP SET CP.CPL_START_DATE='$startDate', CP.CPL_STG_ID='$stgIdVigente' WHERE cp.cpl_clu_cellular_number='$cellularNumber' and cp.cpl_stg_id='$stgIdNoVigente'",
+  "updateReplaceStgIdInCellularPlan": "UPDATE CELLULAR_PLANS CP SET CP.CPL_STG_ID='AX' WHERE cp.cpl_clu_cellular_number = '$cellularNumber' and cp.cpl_stg_id = '$stgIdVigente'",
+  "updateNoDescFieldInTable": "UPDATE $table SET $campo = '' WHERE PCE_CLU_CELLULAR_NUMBER='$billNumber'",
+  "updateChangeRpprGprfIdInRatePlanProfiles": "UPDATE $table SET $campo = '$nuevoValor' WHERE $campo = '$valorActual'",
+  "updateChangePcsStatusConvertionInPrepayCellularStatus": "UPDATE $table SET $campo = '$nuevoValor' WHERE $campo = '$valorActual'",
+  "updateTablaCampoValor": "UPDATE $table SET $campo = '$nuevoValor' WHERE $campo = '$valorActual'",
+  "updateLastRechargeDate": "UPDATE PREPAY_CELLULARS SET PCE_LAST_RECHARGE_DATE = TO_DATE('$lastRechargeDate', 'YYYY-MM-DD HH24:MI:SS') WHERE PCE_CLU_CELLULAR_NUMBER = '$billNumber'"
+}

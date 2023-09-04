@@ -1,0 +1,11 @@
+{
+    "accountBalanceDelta": 0,
+    "deltaAmount": "%monto%",
+    "expiryDate": {
+      "dateTime": "2022-09-10 13:00:52.123 -0300",
+      "format": "yyyy-MM-dd HH:mm:ss.SSS Z"
+    },
+    "operatorId": 0,
+    "tariffPlanId": 0,
+    "transactionType": 0
+}
